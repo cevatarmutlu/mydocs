@@ -1,1 +1,2 @@
-#mydocs kendime ait notları tuttuğum bir defterdir
+# mydocs 
+kendime ait notları tuttuğum bir defterdir
