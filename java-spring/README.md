@@ -39,3 +39,10 @@ compose dosyasını çalıştırmak için:
 ``docker stop`` ile belirli çalışan imageleri duruduruyoruz.
 
 ``docker stop $(docker ps -qa)`` ile çalışan bütün image' leri durduruyoruz.
+
+# mongodb db oluşturma
+https://stackoverflow.com/questions/42912755/how-to-create-a-db-for-mongodb-container-on-start-up
+ya da robo3
+
+### Mongoya bağlantı sağlamak için resources klasörünün içindeki application.properties içine
+bir şeyler yazdı. Mongodb içinde bir tanede db oluşturdu.
