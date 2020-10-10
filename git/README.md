@@ -26,3 +26,5 @@ Local repodaki çalışılan branch' in değişmesini sağlayan kod.
 Çalışılan branch' ı daha önce oluşturulmuş bir branch ile değiştirme: ``git checkout <branch_name>``
 
 ``git checkout -b <branch_name>`` : Bu komut ile yeni bir branch oluşturup çalıştığımız branch' ı oluşturulan branch ile değiştirmiş oluyoruz.
+
+merhahaba cevat nasılsın bakalım senin adın ne salak çocuk
