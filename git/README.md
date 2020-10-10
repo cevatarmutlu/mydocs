@@ -27,4 +27,5 @@ Local repodaki çalışılan branch' in değişmesini sağlayan kod.
 
 ``git checkout -b <branch_name>`` : Bu komut ile yeni bir branch oluşturup çalıştığımız branch' ı oluşturulan branch ile değiştirmiş oluyoruz.
 
-merhahaba cevat nasılsın bakalım senin adın ne salak çocuk
+### ``git merge <branch_name>``
+Bu komut var olan bir branch ile bir ya da daha fazla branch' ı birleştirmeye yarayan komut. Birden fazla branch adı yazarsanır bütün branch' leri birleştirir.
