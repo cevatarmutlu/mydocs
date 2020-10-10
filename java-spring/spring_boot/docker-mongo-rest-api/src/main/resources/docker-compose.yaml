@@ -1,0 +1,7 @@
+version: '3.1' # Docker version
+services:
+  mongo: # Mongo servisi
+    image: mongo # image mongo
+    port:  # local' imdeki portun docker' ın hangi portuna yönlendirileceğini belirten şey
+      - '27017:27017' # 27017 portuma istek gelince bu portu 27017 docker portuna sanırım yönlendirecek
+    command: --serviceExecutor adaptive # ne oduğunu bilmiyorum
