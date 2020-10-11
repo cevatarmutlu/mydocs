@@ -1,9 +1,11 @@
 # Git
 
-## Git komutları hakkında yardım alma komutu
+<br />
+
+## Git komutları hakkında ayrıntılı bilgi almak için
     git <command> --help
 
-<span style="color: blue"> *sdfsafa* </span>
+<br />
 
 ## Yerel Repolar üzerinde çalışma komutları
 
@@ -12,30 +14,56 @@ Bu komutla belirli bir dizini boş bir git reposuna dönüştürüyoruz.
 
     git init
 
-### ``git add <file or directory>``
+<br />
+
+### add
 Bu komut dosyaları ``Git Index`` diğer adıyla ``staging area`` bölgesine eklemizi sağlar. ``Staging area`` bölgesine ekleme yapmadan dosyalar repoya ``commit`` edilemez.
 
-### ``git commit -m "commit mesajı"``
-Local repodaki değişiklikleri kaydetmemizi sağlar. Her ``commit`` ' in uniqe bir ID' si bulunmaktadır. ``commit`` ' lere mesaj eklemek ``commit`` ' lerin bulunmasını kolaylaştırır.
+    git add <files>
 
-### ``git branch``
+<br />
+
+### commit 
+Local repodaki değişiklikleri kaydetmemizi sağlar. Her ``commit`` ' in uniqe bir ID' si bulunmaktadır. ``commit``' lere mesaj eklemek ``commit``' lerin bulunmasını kolaylaştırır.
+
+    git commit -m "commit mesajı"
+
+<br />
+
+### branch
 Local reponun üzerinde çalıştığı branch' ı gösteren komut.
 
-branch oluşturmak için: ``git branch <branch_name>``
 
-remote ya da local branch' leri listelemek için: ``git brach -a``
+    git branch <branch_name> # Branch oluşturur
 
-branch silmek için: ``git bracnh -d <branch_name>``
+    git brach -a # Bütün branch' leri listeler
 
-### ``git checkout``
-Local repodaki çalışılan branch' in değişmesini sağlayan kod.
+    git bracnh -d <branch_name> # Bir branch' ı kaldırır
 
-Çalışılan branch' ı daha önce oluşturulmuş bir branch ile değiştirme: ``git checkout <branch_name>``
+<br />
 
-``git checkout -b <branch_name>`` : Bu komut ile yeni bir branch oluşturup çalıştığımız branch' ı oluşturulan branch ile değiştirmiş oluyoruz.
+### checkout
+Local repodaki çalışılan branch' i değiştirmeyi sağlayan kod.
 
-### ``git merge <branch_name>``
-Bu komut var olan bir branch ile bir ya da daha fazla branch' ı birleştirmeye yarayan komut. Birden fazla branch adı yazarsanır bütün branch' leri birleştirir.
+Çalışılan branch' ı daha önce oluşturulmuş bir branch ile değiştirme: 
+
+    git checkout <branch_name>
+
+<br />
+
+Yeni bir branch oluşturup çalıştığımız branch' ı oluşturulan branch ile değiştirmiş oluyoruz.
+
+    git checkout -b <branch_name>
+
+<br />
+
+### merge
+Bu komut var olan bir branch ile bir ya da daha fazla branch' ı birleştirmeye yarayan komut. Birden fazla branch adı yazarsanız bütün branch' leri birleştirir.
+
+    git merge <branch_name>
+
+<br />
+<br />
 
 ## Remote repo komutları
 
