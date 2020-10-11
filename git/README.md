@@ -1,5 +1,10 @@
 # Git
 
+## Git komutları hakkında yardım alma komutu
+``sdfsdf sdfsfd sdfsdf ``
+
+    git <command> --help
+
 ## Yerel Repolar üzerinde çalışma komutları
 
 ### <span style="color: pink"> INIT </span>
