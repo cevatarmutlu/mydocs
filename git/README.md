@@ -2,8 +2,10 @@
 
 ## Yerel Repolar üzerinde çalışma komutları
 
-### ``git init``
+### <span style="color: pink"> INIT </span>
 Bu komutla belirli bir dizini boş bir git reposuna dönüştürüyoruz.
+
+    git init
 
 ### ``git add <file or directory>``
 Bu komut dosyaları ``Git Index`` diğer adıyla ``staging area`` bölgesine eklemizi sağlar. ``Staging area`` bölgesine ekleme yapmadan dosyalar repoya ``commit`` edilemez.
