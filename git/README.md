@@ -1,13 +1,13 @@
 # Git
 
 ## Git komutları hakkında yardım alma komutu
-``sdfsdf sdfsfd sdfsdf ``
-
     git <command> --help
+
+<span style="color: blue"> *sdfsafa* </span>
 
 ## Yerel Repolar üzerinde çalışma komutları
 
-### <span style="color: pink"> INIT </span>
+### git init
 Bu komutla belirli bir dizini boş bir git reposuna dönüştürüyoruz.
 
     git init
