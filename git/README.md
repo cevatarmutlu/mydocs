@@ -73,6 +73,8 @@ Yerel bir repo ile uzak bir repoyu birbirine bağlayan komut. Uzak reponun url' 
 
     git remote <komut> <remote_repo_adı> <remote_repo_url>
 
+Başka alternatif komutlar:
+
     git remote -v # remote repoları göreüntüler
 
     git remote remove <name>
