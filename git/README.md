@@ -9,7 +9,7 @@
 
 ## Yerel Repolar üzerinde çalışma komutları
 
-### git init
+### init
 Bu komutla belirli bir dizini boş bir git reposuna dönüştürüyoruz.
 
     git init
@@ -51,7 +51,7 @@ Local repodaki çalışılan branch' i değiştirmeyi sağlayan kod.
 
 <br />
 
-Yeni bir branch oluşturup çalıştığımız branch' ı oluşturulan branch ile değiştirmiş oluyoruz.
+Yeni bir branch oluşturup çalıştığımız branch' ı oluşturulan branch ile değiştirme:
 
     git checkout -b <branch_name>
 
@@ -64,21 +64,27 @@ Bu komut var olan bir branch ile bir ya da daha fazla branch' ı birleştirmeye 
 
 <br />
 <br />
+<br />
 
 ## Remote repo komutları
 
-### ``git remote <komut> <remote repo adı> <remote repo url>``
-Yerel bir repo ile uzak bir repoyu birbirine bağlayan komut. Uzak reponun url' ini hatırlama yerine ``remote repo adı`` ile url' e bir isim veriyoruz.
+### remote
+Yerel bir repo ile uzak bir repoyu birbirine bağlayan komut. Uzak reponun url' ini hatırlama yerine url' e bir isim verebiliyoruz.
 
-Remote repoları listemek: ``git remote -v``
+    git remote <komut> <remote_repo_adı> <remote_repo_url>
 
-Başka alternetif komutlar : 
+    git remote -v # remote repoları göreüntüler
 
     git remote remove <name>
+
     git remote rename <old> <new>
+
     git remote get-url name
+
     git remote set-url <name> <newurl>
+
     git remote set-url --add <name> <newurl>
+
 
 ### ``git pull <branch_name> <remote_name/remote_url>``
 Remote repodaki değişiklikleri Local repoya ekler.
