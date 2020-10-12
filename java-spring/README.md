@@ -6,7 +6,7 @@ Java EE(Enterprise Edition)' in ilk çıktığı zamanlarda kullanımının zor 
 Başlangıçta Dependency Injecktion (bağımlılık enjoksiyonu) gibi problemlere çözüm getiren Framework günümüzde bir çok alt kütüphaneden oluşmaktadır: Spring MVC, Spring Security, Spring Data vb.
 
 ### docker
-Docker üzerinden mongoDB çalıştırıp onu veritabanı olarak kullanmak için: https://hub.docker.com/_/mongo
+`Docker` üzerinden `mongoDB` çalıştırıp onu veritabanı olarak kullanmak için: https://hub.docker.com/_/mongo
 
 `Linux` ile `docker` komutlarını terminal üzerinden yazdığımda `sudo` ifadesi ile çalıştırmam gerekiyor yoksa izin hatası veriyor. `sudo` ifadesi kullanmadan da `docker`' ı kullanbilmenin yolu varmış ama bazı düzenlemeler gerekiyor sanırım.
 
@@ -25,7 +25,7 @@ Docker üzerinden mongoDB çalıştırıp onu veritabanı olarak kullanmak için
 
 `mongo:latest` ile `mongo`' nun en son sürümünü kullanmak istediğimizi belirtiyoruz.
 
-Spring projemizde `resources` klasörünün altına `docker-compose.yaml` dosyası belli başlı configürasyonlar yapabilmemeizi sağlıyor.
+`Spring` projemizde `resources` klasörünün altına `docker-compose.yaml` dosyası belli başlı configürasyonlar yapabilmemeizi sağlıyor.
 
 `compose` dosyasını çalıştırmak için:
 
@@ -48,7 +48,7 @@ Spring projemizde `resources` klasörünün altına `docker-compose.yaml` dosyas
 `sudo docker stop $(docker ps -qa)` ile çalışan bütün image' leri durduruyoruz.
 
 # Docker' da çalışan mongodb' de database oluşturma
-Tahmin ettiğim kadarıyla docker üzerinden bir sistemi çalıştırmak demek docker' ın bir tane ortam hazırlayıp çalıştırdığın yapıyı o ortamın belli bir portundan kullanıcının bilgisayarına aktarmak. Bu sebeble doğrudan mongodb' ye erişemiyorsun sanırım. Mongodb üzerinde belli başla işlemler yapmak için ya bir program ya da compose dosyası üzerinden bir şeyler yapabilirsin.
+Tahmin ettiğim kadarıyla docker üzerinden bir sistemi çalıştırmak demek docker' ın bir tane ortam hazırlayıp çalıştıracağı yapıyı o ortamın belli bir portundan kullanıcının bilgisayarına aktarmak. Bu sebeble doğrudan `mongodb`' ye erişemiyorsun sanırım. `Mongodb` üzerinde belli başla işlemler yapmak için ya bir program ya da `compose` dosyası üzerinden bir şeyler yapabilirsin.
 
 Program: `robo3`
 
@@ -58,4 +58,4 @@ ya da robo3
 
 ### Mongoya bağlantı sağlamak için resources klasörünün içindeki application.properties içine bir şeyler yazdı
 
-Böyle bir şey yapmasının sebebi sisteme, bu sistem dışarıya bağlanıcak hatta mongodb' ye bağlanıcak diye kodlarla belirtmişti ve spring' in bağlanacağı database' i ve bu database' e hangi port üzerinden bağlanacağını bu dosyasının içinden belirtiyoruz.
+Böyle bir şey yapmasının sebebi sisteme, bu sistem dışarıya bağlanıcak hatta `mongodb`' ye bağlanıcak diye kodlarla belirtmişti ve `spring`' in bağlanacağı `database`' i ve bu `database`' e hangi `port` üzerinden bağlanacağını bu dosyasının içinden belirtiyoruz.
