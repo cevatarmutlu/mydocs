@@ -6,43 +6,56 @@ Java EE(Enterprise Edition)' in ilk çıktığı zamanlarda kullanımının zor 
 Başlangıçta Dependency Injecktion (bağımlılık enjoksiyonu) gibi problemlere çözüm getiren Framework günümüzde bir çok alt kütüphaneden oluşmaktadır: Spring MVC, Spring Security, Spring Data vb.
 
 ### docker
-mongo-docker repo: https://hub.docker.com/_/mongo
-Docker üzerinden mongoDB çalıştırıp onu veritabanı olarak kullanıldığı bir proje.
-docker' da bir image nasıl ayağı kalkıyor. Mongo' nun ayağa kalmaksı
+Docker üzerinden mongoDB çalıştırıp onu veritabanı olarak kullanmak için: https://hub.docker.com/_/mongo
 
-    docker run --name some-mongo -d mongo:latest
+`Linux` ile `docker` komutlarını terminal üzerinden yazdığımda `sudo` ifadesi ile çalıştırmam gerekiyor yoksa izin hatası veriyor. `sudo` ifadesi kullanmadan da `docker`' ı kullanbilmenin yolu varmış ama bazı düzenlemeler gerekiyor sanırım.
 
-``run`` komutu ile image çalıştırıyoruz.
+> Peki neden docker üzerinden mongodb kullanmalıyım? <br/>
+> Çünkü mongodb' yi bilgisayarına kurmakla uğraşmıyorsun.
 
-``--name`` ile image' e isim veriyoruz.
+`Docker`' da bir image nasıl ayağı kalkıyor. Mongo' nun ayağa kalmak
 
-``-d`` ile ile arka planda çalışmasını sağlıyoruz.
+    sudo docker run --name some-mongo -d mongo:latest
 
-``mongo:latest`` ile mongo' nun en son sürümünü belirtiyoruz.
+`run` komutu ile `Docker image`' i çalıştırıyoruz.
 
-Spring projemizde ``resources`` klasörünün altına ``docker-compose.yaml`` dosyası sayesinde belli başlı configürasyonlar yapabilmemeizi sağlıyor.
+`--name` ile image' e isim veriyoruz.
 
-compose dosyasını çalıştırmak için:
+`-d` ile ile arka planda çalışmasını sağlıyoruz.
 
-    docker-compose -f compose_dosya_yolu up -d
+`mongo:latest` ile `mongo`' nun en son sürümünü kullanmak istediğimizi belirtiyoruz.
 
-``docker-compose`` ile compose dosyası ayağı kaldırıyorlar. docker-compose ben de yokmuş kurmak için ``sudo apt install docker-compose``
+Spring projemizde `resources` klasörünün altına `docker-compose.yaml` dosyası belli başlı configürasyonlar yapabilmemeizi sağlıyor.
 
-``-f`` ile bir file olduğu belli ediliyor ve dosya yolu veriliyor.
+`compose` dosyasını çalıştırmak için:
 
-``up`` ile ayağa kaldırılıyor.
+    sudo docker-compose -f compose_dosya_yolu up -d
 
-``-d`` ile arka planda çalışması sağlanıyor.
+`docker-compose` ile `compose` dosyası ayağı kaldırılıyor. 
 
-``docker ps`` komutu ile çalışan image' ler görebiliyoruz.
+`docker-compose`' u linux bilgisayarlara kurmak için: `sudo apt install docker-compose`
 
-``docker stop`` ile belirli çalışan imageleri duruduruyoruz.
+`-f` ile bir file olduğu belli ediliyor ve dosya yolu veriliyor.
 
-``docker stop $(docker ps -qa)`` ile çalışan bütün image' leri durduruyoruz.
+`up` ile ayağa kaldırılıyor.
 
-# mongodb db oluşturma
-https://stackoverflow.com/questions/42912755/how-to-create-a-db-for-mongodb-container-on-start-up
+`-d` ile arka planda çalışması sağlanıyor.
+
+`sudo docker ps` komutu ile çalışan image' ler görebiliyoruz.
+
+`sudo docker stop` ile belirli çalışan imageleri duruduruyoruz.
+
+`sudo docker stop $(docker ps -qa)` ile çalışan bütün image' leri durduruyoruz.
+
+# Docker' da çalışan mongodb' de database oluşturma
+Tahmin ettiğim kadarıyla docker üzerinden bir sistemi çalıştırmak demek docker' ın bir tane ortam hazırlayıp çalıştırdığın yapıyı o ortamın belli bir portundan kullanıcının bilgisayarına aktarmak. Bu sebeble doğrudan mongodb' ye erişemiyorsun sanırım. Mongodb üzerinde belli başla işlemler yapmak için ya bir program ya da compose dosyası üzerinden bir şeyler yapabilirsin.
+
+Program: `robo3`
+
+Compose dosyası ile: https://stackoverflow.com/questions/42912755/how-to-create-a-db-for-mongodb-container-on-start-up
 ya da robo3
 
-### Mongoya bağlantı sağlamak için resources klasörünün içindeki application.properties içine
-bir şeyler yazdı. Mongodb içinde bir tanede db oluşturdu.
+
+### Mongoya bağlantı sağlamak için resources klasörünün içindeki application.properties içine bir şeyler yazdı
+
+Böyle bir şey yapmasının sebebi sisteme, bu sistem dışarıya bağlanıcak hatta mongodb' ye bağlanıcak diye kodlarla belirtmişti ve spring' in bağlanacağı database' i ve bu database' e hangi port üzerinden bağlanacağını bu dosyasının içinden belirtiyoruz.

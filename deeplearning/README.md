@@ -4,7 +4,6 @@ Deep Learning ile ilgili kendimce notlar aldığım ve sorular sorduğum bir yer
 <br />
 
 ## Yapay Zeka, Makine Öğrenmesi ve Derin Öğrenme nedir?
-<br />
 
 Yapay Zeka evrensel küme. Makine öğrenmesi Yapay Zekanın alt kümesi. Deep Learning ise Makine öğrenmesinin alt kümesidir.
 
