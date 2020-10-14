@@ -30,7 +30,7 @@ public class Person {
     @Field(name = "surname", type = FieldType.Text)
     private String surname;
     
-    @Field(name = "burndate", type = FieldType.Date)
-    private Date burndate;
+    @Field(name = "burndate", type = FieldType.Text)
+    private String burndate;
 
 }
