@@ -9,6 +9,8 @@
 
 ## Yerel Repolar üzerinde çalışma komutları
 
+<br />
+
 ### init
 Bu komutla belirli bir dizini boş bir git reposuna dönüştürüyoruz.
 
@@ -68,6 +70,8 @@ Bu komut var olan bir branch ile bir ya da daha fazla branch' ı birleştirmeye 
 
 ## Remote repo komutları
 
+<br />
+
 ### remote
 Yerel bir repo ile uzak bir repoyu birbirine bağlayan komut. Uzak reponun url' ini hatırlama yerine url' e bir isim verebiliyoruz.
 
@@ -103,4 +107,6 @@ Remote repo' ya yazdıklarımızı push' lamak için:
 
     git push
 
-    git push origin --delete <remote_branch_name>
+Alternatifler:
+
+    git push origin --delete <remote_branch_name> # remote repo' daki branch' i siler
