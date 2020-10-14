@@ -9,12 +9,13 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 
 public interface PersonRepository extends ElasticsearchRepository<Person, String> {
 
-    // bool' in query olarak örtüşmeli (match) name ile 0. (?0) örtüşsün
+    // bool' in query olarak örtüşmeli(match) name ile 0. (?0) örtüşsün
     //Sadece adı örtüşen gelsin
     @Query("{\"bool\": {\"must\": [{\"match\": {\"name\": \"?0\"}}]}}") // Bunlar elasticsearch queryleri
     // elasticsearch' un kendi sitesinden öğrenebilirsin.
     List<Person> getByCustomer(String search);
     
+    // Spring' ın sağladığı Query' ler
     List<Person> findByNameLikeOrSurnameLike(String name, String surname); 
     //Spring' in bize sunduğu bir query. Başlangıcı name veya surname' e uyan sorguları getirecek
     

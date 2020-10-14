@@ -20,14 +20,15 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("person")
 public class PersonController {
 
-    //@Autowired
+    // Ne işe yarıyor. Bu class başlatıkdıktan sonra personRepository referer ya da pointer' ina PersonRepository nesnesi atıyor.
     private final PersonRepository personRepository; // burada final ve yukarıdaki
     //RequiredArgsCon.. bir nesne oluşturmak için. büyük ihtimalle default olarak kendisi
     // Buradaki gibi bir şey oluşturuyor contructer parametresi olarak. Biz başka bir şey yazarsak
     //çalışmıyor.
 
     // Bu javadan geliyor
-    // Bu kısım mongodb' ye veri eklemek için
+    // Bu kısım elastic' e veri eklemek için var.
+    // Yapmasını söylediği şey şu. Bu class' tan bir nesne üretildikten sonra yana contructor çalıştıktan sonra bu init çalışsın demek oluyor.
     @PostConstruct 
     public void init() {
         Person person = new Person();
@@ -35,14 +36,13 @@ public class PersonController {
         person.setSurname("armutlu");
         person.setBurndate("asdfasdf");
         person.setId("P0001");
-        personRepository.save(person);
+        personRepository.save(person); // Bu kısım ile elastic' e veri ekliyoruz
     }
 
-    @GetMapping("/{search}")
+    @GetMapping("/{search}") // GetMapping içine verdiğimiz ifade ile /person yoluna /cevat gibi bir şey yazdığımızda
+    // bu metot çalışacak ve yazılan cevat değerini metoduna atayacak. Arama işini ise @PathVariable anno' su yapacak.
     public ResponseEntity<List<Person>> getPerson(@PathVariable String search) {
         List<Person> people = personRepository.findByNameContainsOrSurnameContains(search, search);
-        System.out.println(people);
-        System.out.println(personRepository.findByNameLikeOrSurnameLike(search, search));
         return ResponseEntity.ok(people);
     }
 
