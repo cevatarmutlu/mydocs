@@ -87,10 +87,20 @@ Başka alternatif komutlar:
 
     git remote set-url --add <name> <newurl>
 
+<br />
 
-### ``git pull <branch_name> <remote_name/remote_url>``
-Remote repodaki değişiklikleri Local repoya ekler.
+### pull
+Remote repodaki değişiklikleri Local repoya ekler. Ekleme sırasında eğer üst üste binen kodlar varsa ne yapmasını gerektiğini sorar. En azından bende öyle yaptı.
 
+    git pull <branch_name> <remote_name/remote_url>
+
+<br />
 
 ### push
+Remote repo üzerinden işlemler yapabilmemizi sağlar.
+
+Remote repo' ya yazdıklarımızı push' lamak için:
+
+    git push
+
     git push origin --delete <remote_branch_name>
