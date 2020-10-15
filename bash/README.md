@@ -10,9 +10,9 @@ env active => `source viras/bin/activate`
 
 env deactive => `deactivate`
 
-> viras benim env' leri tuttuğun klasör
+> viras benim env' leri tuttuğum klasör
 
-`.bashrc` klasöründe `alias` için araştırma yaparken. Aklıma nasıl yaptığım `alias`' a parametre verebilirim diye bir şey geldi. İnternette araştırırken bir tane adam `alias` yerine bir tane `function` yazıp onu kullanabilirsin yazmış.
+Belli işlemleri kısayol ile hızlıca açmak için araştırma yaparken. Aklıma 'nasıl yaptığım `alias`' a parametre verebilirim' diye bir şey geldi. İnternette araştırırken bir tane adam `alias` yerine bir tane `function` yazıp onu kullanabilirsin yazmış.
 
 Benim `env` oluşturmak, aktif ve deaktif etmek için kullandığım fonksiyon:
 
