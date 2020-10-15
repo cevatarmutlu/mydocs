@@ -51,6 +51,8 @@ Teşekkürler Linux :) (Büyük ihtimalle Windows' un kendisinde de vardır.)
 <br />
 <br />
 
+Daha gelişmiş bir örnek
+
 ```bash
 temp() {
     while test $# -gt 0; do
