@@ -14,7 +14,7 @@ env deactive => `deactivate`
 
 Belli işlemleri kısayol ile hızlıca açmak için araştırma yaparken. Aklıma 'nasıl yaptığım `alias`' a parametre verebilirim' diye bir şey geldi. İnternette araştırırken bir tane adam `alias` yerine bir tane `function` yazıp onu kullanabilirsin yazmış.
 
-Benim `env` oluşturmak, aktif ve deaktif etmek için kullandığım fonksiyon (daha gelişmişleride bulunmakta):
+Benim `env` oluşturmak, aktif ve deaktif etmek için kullandığım fonksiyon:
 
 ```bash
 #*****************************************************
@@ -45,3 +45,39 @@ Bu fonksiyonu `.bashrc` dosyasının içine yapıştırdıktan sonra aşağıdak
 Terminalde venv ile istediğim komutu kullanabiliyorum. 
 
 Teşekkürler Linux :) (Büyük ihtimalle Windows' un kendisinde de vardır.)
+
+<br />
+<br />
+<br />
+<br />
+
+```bash
+temp() {
+    while test $# -gt 0; do
+      case "$1" in
+        -h|--help)
+          echo "options:"
+          echo "-h, --help                show brief help"
+          echo "-csvpath                  specify csv file path"
+          echo "-keypath                  specify key path"
+          exit 0
+          ;;
+        -csvpath)
+          shift
+          csvpath=$1
+          shift
+          ;;
+        -keypath)
+          shift
+          keypath=$1
+          shift
+          ;;
+        *)
+          break
+          ;;
+      esac
+    done
+    echo "$csvpath $keypath"
+}
+
+```
