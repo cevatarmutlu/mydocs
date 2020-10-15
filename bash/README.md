@@ -1,7 +1,7 @@
 ## Bash
 <br />
 
-### Parametreli kısayol ekleme
+### Parametre alabilen kısayol ekleme
 <br />
 
 env generate => `virtualenv -p python3 path + name`
