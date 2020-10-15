@@ -1,6 +1,8 @@
 ## Bash
+<br />
 
 ### Parametreli kısayol ekleme
+<br />
 
 env generate => `virtualenv -p python3 path + name`
 
@@ -34,7 +36,7 @@ venv() {
 # ***************************************************
 ```
 
-Bu komutu `.bashrc` dosyasının içine yapıştırdıktan sonra aşağıdaki komutu çalıştırmamız gerekiyor ki yazdığımız fonksiyon' u kullanabilelim.
+Bu fonksiyonu `.bashrc` dosyasının içine yapıştırdıktan sonra aşağıdaki komutu çalıştırmamız gerekiyor ki yazdığımız fonksiyon' u kullanabilelim.
 
     source .bashrc 
 
