@@ -14,7 +14,7 @@ env deactive => `deactivate`
 
 Belli işlemleri kısayol ile hızlıca açmak için araştırma yaparken. Aklıma 'nasıl yaptığım `alias`' a parametre verebilirim' diye bir şey geldi. İnternette araştırırken bir tane adam `alias` yerine bir tane `function` yazıp onu kullanabilirsin yazmış.
 
-Benim `env` oluşturmak, aktif ve deaktif etmek için kullandığım fonksiyon:
+Benim `env` oluşturmak, aktif ve deaktif etmek için kullandığım fonksiyon (daha gelişmişleride bulunmakta):
 
 ```bash
 #*****************************************************
