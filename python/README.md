@@ -22,7 +22,7 @@
     print(arr)
 ```
 
-### String Formatting
+## String Formatting
 
 ```python
 var = "merhaba"
