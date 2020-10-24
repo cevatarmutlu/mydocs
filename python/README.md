@@ -22,6 +22,19 @@
     print(arr)
 ```
 
+### Seed
+
+```python
+import numpy as np
+np.random.seed(42) # random sayı üretmek için bir değer kullanılıyor ve buna
+# seed deniyor. Bu değere belli bir şey atıyorsun sanırım. Çünkü her çalıştırmada aynı netice çıkıyor
+# aşağıdaki değerlerden
+
+print(np.random.randint(12))
+print(np.random.randint(12))
+print(np.random.randint(12))
+```
+
 ## String Formatting
 
 ```python
