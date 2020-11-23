@@ -2,6 +2,29 @@
 
 ## Numpy
 
+## Numpy Shape, NDIM, AXIS
+Benim aklımda tutma şeklimle `shape`, `ndim`, ve `axis` ne demek daha sonra unutursam diye not alıyorum.
+
+`arr = [ [1, 2, 3], [4, 5, 6] ]` -> Bu diziyi temel alarak belli işlemleri açıklarsak.
+
+`arr` dizisinin `ndim`' i `2` dir. Çünkü en dışta 1 tane köşeli parantez yani bir dizi vardır. Dıştaki köşeli parantezin içinde ise 2 tane aynı boyutlu yani eleman sayılı dizi vardır. İçteki dizilerin kaç tane olduğunun `ndim` açısından bir önemi yoktur. Bir dizi içinde 1 tane dizi bile olsa bu dizi 2 boyutludur(ndim) denir. `[[[1]]]` böyle bir dizinin `ndim`' i 3 tür. Çünkü iç içe 3 tane dizi vardır.
+
+Dizilerin içinde kaç tane elemanın olduğu `shape`' i alakadar eder. Mesela `arr` dizisinin shape' i `(2, 3)`' dür. En dışta bir tane dizi vardır ve o dizi `axis 0` olarak geçer ve içinde 2 tane eleman vardır. Bu yüzden ilk indiste 2 yazar. axis 1 ise içteki dizi veya dizilerin kaç tane eleman barındırdığını söyler. `arr` dizisinde 3 yazar. Yani `shape`' e bakıncı `arr` dizisinin içinde 2 tane dizi elemanı varmış ve bu iki dizi elemanının içinde ise 3 tane eleman varmış olarak okuyorum ben.
+
+`arr.sum(axis=0)` işlemi axis 0' daki bütün dizileri toplamaya yarar. En dıştaki dizi axis 0 olduğu için ve axis 0' ın içinde de 2 tane eleman olduğu için bu işlem o iki elemanı toplamaya yarar ve çıktı olarak bu işlem `[5, 7, 9]` çıktısını verir. Yani aslında bu işlem __en dıştaki dizinin içinde bulunan bütün dizileri element-wise (eleman bazlı)  olarak topla demektir__
+
+`arr.sum(axis=1)` işlemi ise axis 1' deki elemanları toplamaya yarar. Mesela axis 1' de bulunan 2 diziden biri `[1, 2, 3]`' dür ve bu işlem bu dizideki bütün elemanları toplamaya yarar. Çıktı olarak bu işlem şöyle bir şey verir. `[ 6, 15 ]` -> __6 değeri 1+2+3, 15 değeri ise 4+5+6__
+
+```python
+import numpy as np
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+print('shape: ', arr.shape, 'ndim: ', arr.ndim) # shape: (2, 3) ndim: 2
+
+print('axis 0 sum: ', arr.sum(axis=0)) # [5, 7, 9]
+
+print('axis 1 sum:', arr.sum(axis=1)) # [6, 15]
+```
+
 ### Random sayi üretme:
 
 ```python
