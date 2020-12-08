@@ -3,7 +3,7 @@ kendime ait notları tuttuğum bir defterdir.
 
 __Not__: Artık Yeni bilgiler branch olarak eklenecektir.
 
-- [Apache Spark](https://github.com/cevatarmutlu/mydocs)
+- Apache Spark
 
 
 ## maven
