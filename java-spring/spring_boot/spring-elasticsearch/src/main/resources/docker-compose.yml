@@ -1,9 +1,0 @@
-version: '3.1' # Docker version
-services:
-  elasticsearch: # Mongo servisi
-    image: elasticsearch:7.9.2 # image mongo
-    ports: 
-      - '9200:9200' # http portu
-      - '9300:9300' # tcp/ip port
-    environment: # tek node üzerinden başlatmak için
-      - discovery.type=single-node
